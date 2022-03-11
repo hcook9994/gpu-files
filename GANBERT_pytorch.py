@@ -17,7 +17,7 @@
 # In[1]:
 
 
-get_ipython().system('pip install transformers==4.3.2')
+# get_ipython().system('pip install transformers==4.3.2')
 import torch
 import io
 import torch.nn.functional as F
