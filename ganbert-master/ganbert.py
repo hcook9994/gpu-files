@@ -148,8 +148,8 @@ def convert_single_example(ex_index, example, label_list, max_seq_length,
         input_mask=[0] * max_seq_length,
         segment_ids=[0] * max_seq_length,
         label_id=0,
-        label_mask=1,
-        is_real_example=0)
+        label_mask=label_mask,
+        is_real_example=False)
 
   label_map = {}
   for (i, label) in enumerate(label_list):
@@ -269,7 +269,7 @@ def file_based_convert_examples_to_features(
     features["input_mask"] = create_int_feature(feature.input_mask)
     features["segment_ids"] = create_int_feature(feature.segment_ids)
     features["label_ids"] = create_int_feature([feature.label_id])
-    features["label_mask"] = create_int_feature([feature.label_mask])
+    features["label_mask"] = create_int_feature(int([feature.label_mask]))
     features["is_real_example"] = create_int_feature(
         [int(feature.is_real_example)])
 
