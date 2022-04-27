@@ -148,7 +148,7 @@ def convert_single_example(ex_index, example, label_list, max_seq_length,
         input_mask=[0] * max_seq_length,
         segment_ids=[0] * max_seq_length,
         label_id=0,
-        label_mask=int(label_mask),
+        label_mask=1,
         is_real_example=0)
 
   label_map = {}
