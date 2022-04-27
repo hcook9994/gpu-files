@@ -258,7 +258,7 @@ def file_based_convert_examples_to_features(
                                      max_seq_length, tokenizer, label_masks[ex_index])
 
     def create_int_feature(values):
-      tf.logging.info("Random Message")
+      tf.logging.info("Random Message New")
       tf.logging.info(list(values))
       tf.logging.info(tf.train.Int64List(value=list(values)))
       f = tf.train.Feature(int64_list=tf.train.Int64List(value=list(values)))
