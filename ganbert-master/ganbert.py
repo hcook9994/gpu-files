@@ -385,7 +385,10 @@ def discriminator(x, d_hidden_size, dkp, is_training, num_labels, num_hidden_dis
 
 
 ############ Defining Generator ############
+var=1
 def generator(z, g_hidden_size, dkp, is_training, num_hidden_generator = 1, reuse = False):
+    tf.logging.info(f"generator_called {var}")
+    var=var+1
     with tf.compat.v1.variable_scope('Generator', reuse = reuse):
         layer_hidden = z
 
@@ -394,7 +397,6 @@ def generator(z, g_hidden_size, dkp, is_training, num_hidden_generator = 1, reus
             layer_hidden = tf.nn.leaky_relu(layer_hidden)
             layer_hidden = tf.nn.dropout(layer_hidden, rate = 1 - dkp)
         layer_hidden = tf.layers.dense(layer_hidden, g_hidden_size)
-
     return layer_hidden
 
 
