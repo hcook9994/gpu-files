@@ -387,7 +387,6 @@ def discriminator(x, d_hidden_size, dkp, is_training, num_labels, num_hidden_dis
 
 ############ Defining Generator ############
 def generator(z, g_hidden_size, dkp, is_training, num_hidden_generator = 1, reuse = False):
-    tf.logging.info(f"generator_called {var}")
     with tf.compat.v1.variable_scope('Generator', reuse = reuse):
         layer_hidden = z
         for i in range(num_hidden_generator):
