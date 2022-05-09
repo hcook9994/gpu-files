@@ -119,7 +119,7 @@ class QcFineProcessor(DataProcessor):
             contents = f.read()
             file_as_list = contents.splitlines()
             for line in file_as_list[1:]:
-                split = line.split("\t")
+                split = line.split(" ")
                 question = ' '.join(split[1:])
 
                 guid = "%s-%s" % (set_type, tokenization.convert_to_unicode(line))
