@@ -148,7 +148,7 @@ def get_qc_examples(input_file):
       contents = f.read()
       file_as_list = contents.splitlines()
       for line in file_as_list[1:]:
-          split = line.split(" ")
+          split = line.split("\t")
           question = ' '.join(split[1:])
 
           text_a = question
