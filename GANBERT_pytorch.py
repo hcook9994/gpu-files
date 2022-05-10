@@ -116,7 +116,7 @@ model_name = "bert-base-cased"
 #--------------------------------
 #  Retrieve the TREC QC Dataset
 #--------------------------------
-get_ipython().system(' git clone https://github.com/crux82/ganbert')
+#get_ipython().system(' git clone https://github.com/crux82/ganbert')
 
 #  NOTE: in this setting 50 classes are involved
 labeled_file = "./ganbert/data/labeled.tsv"
