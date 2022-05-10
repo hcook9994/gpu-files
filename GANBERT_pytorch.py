@@ -112,7 +112,8 @@ print_each_n_step = 10
 #model_name = "albert-base-v2"
 #model_name = "xlm-roberta-base"
 #model_name = "amazon/bort"
-model_name="google/electra-large-discriminator"
+#model_name="google/electra-large-discriminator"
+model_name="google/electra-small-discriminator"
 
 #--------------------------------
 #  Retrieve the TREC QC Dataset
