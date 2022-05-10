@@ -636,6 +636,7 @@ for epoch_i in range(0, num_train_epochs):
             'Training Time': training_time,
             'Test Time': test_time
         }
+    )
     print("model outputs")
     print(len(model_outputs))
     print(len(model_outputs[0]))
@@ -645,7 +646,6 @@ for epoch_i in range(0, num_train_epochs):
     print(len(hidden_states))
     print(len(hidden_states[0]))
     print(hidden_states)
-    )
 
 
 # In[12]:
