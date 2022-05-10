@@ -649,7 +649,7 @@ print("\nTraining complete!")
 
 print("Total training took {:} (h:mm:ss)".format(format_time(time.time()-total_t0)))
 
-print("model outputs)
+print("model outputs")
 print(len(model_outputs))
 print(model_outputs)
 print("hidden states")
