@@ -106,9 +106,9 @@ print_each_n_step = 10
 # Since this version is compatible with Huggingface transformers, you can uncomment
 # (or add) transformer models compatible with GAN
 
-#model_name = "bert-base-cased"
+model_name = "bert-base-cased"
 #model_name = "bert-base-uncased"
-model_name = "roberta-base"
+#model_name = "roberta-base"
 #model_name = "albert-base-v2"
 #model_name = "xlm-roberta-base"
 #model_name = "amazon/bort"
@@ -323,6 +323,7 @@ class Generator(nn.Module):
         self.layers = nn.Sequential(*layers)
 
     def forward(self, noise):
+        print("forward generator called")
         output_rep = self.layers(noise)
         return output_rep
 
@@ -345,6 +346,7 @@ class Discriminator(nn.Module):
         self.softmax = nn.Softmax(dim=-1)
 
     def forward(self, input_rep):
+        print("forward discriminator called")
         input_rep = self.input_dropout(input_rep)
         last_rep = self.layers(input_rep)
         logits = self.logit(last_rep)
@@ -646,4 +648,11 @@ for stat in training_stats:
 print("\nTraining complete!")
 
 print("Total training took {:} (h:mm:ss)".format(format_time(time.time()-total_t0)))
+
+print("model outputs)
+print(len(model_outputs))
+print(model_outputs)
+print("hidden states")
+print(len(hidden_states))
+print(hidden_states)
 
