@@ -73,10 +73,10 @@ batch_size = 64
 #--------------------------------
 # number of hidden layers in the generator, 
 # each of the size of the output space
-num_hidden_layers_g = 3; 
+num_hidden_layers_g = 1; 
 # number of hidden layers in the discriminator, 
 # each of the size of the input space
-num_hidden_layers_d = 3; 
+num_hidden_layers_d = 1; 
 # size of the generator's input noisy vectors
 noise_size = 100
 # dropout to be applied to discriminator's input vectors
