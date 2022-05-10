@@ -119,9 +119,9 @@ model_name = "xlm-roberta-base"
 #get_ipython().system(' git clone https://github.com/crux82/ganbert')
 
 #  NOTE: in this setting 50 classes are involved
-labeled_file = "./ganbert-master/amazon_data/labeled.tsv"
-unlabeled_file = "./ganbert-master/amazon_data/unlabeled.tsv"
-test_filename = "./ganbert-master/amazon_data/test.tsv"
+labeled_file = "./ganbert-master/data/labeled.tsv"
+unlabeled_file = "./ganbert-master/data/unlabeled.tsv"
+test_filename = "./ganbert-master/data/test.tsv"
 
 label_list = ["UNK_UNK","0_0","1_1"]
 
