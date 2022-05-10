@@ -92,7 +92,7 @@ apply_balance = True
 learning_rate_discriminator = 5e-5
 learning_rate_generator = 5e-5
 epsilon = 1e-8
-num_train_epochs = 10
+num_train_epochs = 3
 multi_gpu = True
 # Scheduler
 apply_scheduler = False
