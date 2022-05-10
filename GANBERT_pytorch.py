@@ -123,7 +123,19 @@ labeled_file = "./ganbert-master/data/labeled.tsv"
 unlabeled_file = "./ganbert-master/data/unlabeled.tsv"
 test_filename = "./ganbert-master/data/test.tsv"
 
-label_list = ["UNK_UNK","0_0","1_1"]
+#label_list = ["UNK_UNK","0_0","1_1"]
+label_list = ["UNK_UNK","ABBR_abb", "ABBR_exp", "DESC_def", "DESC_desc", 
+              "DESC_manner", "DESC_reason", "ENTY_animal", "ENTY_body", 
+              "ENTY_color", "ENTY_cremat", "ENTY_currency", "ENTY_dismed", 
+              "ENTY_event", "ENTY_food", "ENTY_instru", "ENTY_lang", 
+              "ENTY_letter", "ENTY_other", "ENTY_plant", "ENTY_product", 
+              "ENTY_religion", "ENTY_sport", "ENTY_substance", "ENTY_symbol", 
+              "ENTY_techmeth", "ENTY_termeq", "ENTY_veh", "ENTY_word", "HUM_desc", 
+              "HUM_gr", "HUM_ind", "HUM_title", "LOC_city", "LOC_country", 
+              "LOC_mount", "LOC_other", "LOC_state", "NUM_code", "NUM_count", 
+              "NUM_date", "NUM_dist", "NUM_money", "NUM_ord", "NUM_other", 
+              "NUM_perc", "NUM_period", "NUM_speed", "NUM_temp", "NUM_volsize", 
+              "NUM_weight"]
 
 
 # Load the Tranformer Model
@@ -148,7 +160,7 @@ def get_qc_examples(input_file):
       contents = f.read()
       file_as_list = contents.splitlines()
       for line in file_as_list[1:]:
-          split = line.split("\t")
+          split = line.split(" ")
           question = ' '.join(split[1:])
 
           text_a = question
