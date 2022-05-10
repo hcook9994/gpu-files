@@ -106,11 +106,11 @@ print_each_n_step = 10
 # Since this version is compatible with Huggingface transformers, you can uncomment
 # (or add) transformer models compatible with GAN
 
-model_name = "bert-base-cased"
+#model_name = "bert-base-cased"
 #model_name = "bert-base-uncased"
 #model_name = "roberta-base"
 #model_name = "albert-base-v2"
-#model_name = "xlm-roberta-base"
+model_name = "xlm-roberta-base"
 #model_name = "amazon/bort"
 
 #--------------------------------
