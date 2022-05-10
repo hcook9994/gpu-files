@@ -323,7 +323,7 @@ class Generator(nn.Module):
         self.layers = nn.Sequential(*layers)
 
     def forward(self, noise):
-        print("forward generator called")
+        #print("forward generator called")
         output_rep = self.layers(noise)
         return output_rep
 
@@ -346,7 +346,7 @@ class Discriminator(nn.Module):
         self.softmax = nn.Softmax(dim=-1)
 
     def forward(self, input_rep):
-        print("forward discriminator called")
+        #print("forward discriminator called")
         input_rep = self.input_dropout(input_rep)
         last_rep = self.layers(input_rep)
         logits = self.logit(last_rep)
@@ -636,6 +636,15 @@ for epoch_i in range(0, num_train_epochs):
             'Training Time': training_time,
             'Test Time': test_time
         }
+    print("model outputs")
+    print(len(model_outputs))
+    print(len(model_outputs[0]))
+    print(len(model_outputs[1]))
+    print(model_outputs)
+    print("hidden states")
+    print(len(hidden_states))
+    print(len(hidden_states[0]))
+    print(hidden_states)
     )
 
 
@@ -648,11 +657,4 @@ for stat in training_stats:
 print("\nTraining complete!")
 
 print("Total training took {:} (h:mm:ss)".format(format_time(time.time()-total_t0)))
-
-print("model outputs")
-print(len(model_outputs))
-print(model_outputs)
-print("hidden states")
-print(len(hidden_states))
-print(hidden_states)
 
