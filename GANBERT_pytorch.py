@@ -637,10 +637,17 @@ for epoch_i in range(0, num_train_epochs):
             'Test Time': test_time
         }
     )
+    print("input ids")
+    print(len(b_input_ids))
+    print(b_input_ids)
+    print("input mask")
+    print(len(b_input_mask))
+    print(b_input_mask)
     print("model outputs")
     print(len(model_outputs))
     print(len(model_outputs[0]))
     print(len(model_outputs[0][0]))
+    print(len(model_outputs[0][0][0]))
     print(len(model_outputs[1]))
     print(model_outputs)
     print("hidden states")
