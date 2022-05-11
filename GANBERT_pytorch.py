@@ -473,8 +473,6 @@ for epoch_i in range(0, num_train_epochs):
             
             # Report progress.
             print('  Batch {:>5,}  of  {:>5,}.    Elapsed: {:}.'.format(step, len(train_dataloader), elapsed))
-            print("size")
-            print(train_dataloader.size)
 
         # Unpack this training batch from our dataloader. 
         b_input_ids = batch[0].to(device)
