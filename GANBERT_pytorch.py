@@ -473,6 +473,8 @@ for epoch_i in range(0, num_train_epochs):
             
             # Report progress.
             print('  Batch {:>5,}  of  {:>5,}.    Elapsed: {:}.'.format(step, len(train_dataloader), elapsed))
+            print("size")
+            print(train_dataloader.size)
 
         # Unpack this training batch from our dataloader. 
         b_input_ids = batch[0].to(device)
@@ -670,6 +672,10 @@ for epoch_i in range(0, num_train_epochs):
     print(len(b_input_ids))
     print(len(b_input_ids[0]))
     print(b_input_ids)
+    print("first input id")
+    print(b_input_ids[0])
+    print("decoded input ids")
+    print(print(tokenizer.decode(encoded_sent))
     print("input mask")
     print(len(b_input_mask))
     print(b_input_mask)
@@ -684,6 +690,8 @@ for epoch_i in range(0, num_train_epochs):
     print(len(hidden_states))
     print(len(hidden_states[0]))
     print(hidden_states)
+    print("size hidden states")
+    print(hidden_states.size)
     print("generator output")
     print(len(gen_rep))
     print(len(gen_rep[0]))
