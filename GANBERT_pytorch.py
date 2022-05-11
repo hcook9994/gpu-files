@@ -247,6 +247,25 @@ def generate_data_loader(input_examples, label_masks, label_map, do_shuffle = Fa
 
   # Building the TensorDataset
   dataset = TensorDataset(input_ids, input_mask_array, label_id_array, label_mask_array)
+  
+  print("text")
+  print(text)
+  print("label_mask")
+  print(len(label_mask))
+  print(label_mask)
+  print("input ids")
+  print(len(input_ids))
+  print(input_ids)
+  print("input_mask_array")
+  print(len(input_mask_array))
+  print(input_mask_array)
+  print("label_id_array")
+  print(len(label_id_array))
+  print(label_id_array)
+  print("label_mask_array")
+  print(len(label_mask_array))
+  print(label_mask_array)
+  
 
   if do_shuffle:
     sampler = RandomSampler
@@ -639,6 +658,7 @@ for epoch_i in range(0, num_train_epochs):
     )
     print("input ids")
     print(len(b_input_ids))
+    print(len(b_input_ids[0]))
     print(b_input_ids)
     print("input mask")
     print(len(b_input_mask))
