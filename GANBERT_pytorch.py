@@ -251,7 +251,6 @@ def generate_data_loader(input_examples, label_masks, label_map, do_shuffle = Fa
   print("text")
   print(text)
   print("label_mask")
-  print(len(label_mask))
   print(label_mask)
   print("input ids")
   print(len(input_ids))
