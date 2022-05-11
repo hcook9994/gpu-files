@@ -255,6 +255,7 @@ def generate_data_loader(input_examples, label_masks, label_map, do_shuffle = Fa
   print(text[0])
   print("encoded sent")
   print(encoded_sent)
+  print(len(encoded_sent))
   print("decoded text")
   print(tokenizer.decode(encoded_sent))
   print("label_mask")
@@ -394,6 +395,9 @@ hidden_size = int(config.hidden_size)
 hidden_levels_g = [hidden_size for i in range(0, num_hidden_layers_g)]
 hidden_levels_d = [hidden_size for i in range(0, num_hidden_layers_d)]
 
+print("hidden size")
+print(hidden_size)
+
 #-------------------------------------------------
 #   Instantiate the Generator and Discriminator
 #-------------------------------------------------
@@ -492,6 +496,7 @@ for epoch_i in range(0, num_train_epochs):
         noise = torch.zeros(real_batch_size, noise_size, device=device).uniform_(0, 1)
         # Gnerate Fake data
         gen_rep = generator(noise)
+        gen_rep.size()
 
         # Generate the output of the Discriminator for real and fake data.
         # First, we put together the output of the tranformer and the generator
@@ -683,6 +688,8 @@ for epoch_i in range(0, num_train_epochs):
     print(len(model_outputs[0][0]))
     print(len(model_outputs[0][0][0]))
     print(len(model_outputs[1]))
+    print("model outputs size")
+    print(model_outputs.size())
     print(model_outputs)
     print("hidden states")
     print(len(hidden_states))
@@ -694,6 +701,10 @@ for epoch_i in range(0, num_train_epochs):
     print(len(gen_rep))
     print(len(gen_rep[0]))
     print(gen_rep)
+    print("real batch size")
+    print(real_batch_size)
+    print("discriminator input size")
+    print(disciminator_input.size())
     
 
 
