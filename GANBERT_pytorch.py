@@ -675,7 +675,7 @@ for epoch_i in range(0, num_train_epochs):
     print("first input id")
     print(b_input_ids[0])
     print("decoded input ids")
-    print(print(tokenizer.decode(encoded_sent))
+    print(print(tokenizer.decode(encoded_sent)))
     print("input mask")
     print(len(b_input_mask))
     print(b_input_mask)
