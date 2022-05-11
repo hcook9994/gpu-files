@@ -689,7 +689,7 @@ for epoch_i in range(0, num_train_epochs):
     print(len(hidden_states[0]))
     print(hidden_states)
     print("size hidden states")
-    print(hidden_states.size)
+    print(hidden_states.size())
     print("generator output")
     print(len(gen_rep))
     print(len(gen_rep[0]))
