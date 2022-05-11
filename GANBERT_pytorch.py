@@ -496,7 +496,7 @@ for epoch_i in range(0, num_train_epochs):
         noise = torch.zeros(real_batch_size, noise_size, device=device).uniform_(0, 1)
         # Gnerate Fake data
         gen_rep = generator(noise)
-        gen_rep.size()
+        print(gen_rep.size())
 
         # Generate the output of the Discriminator for real and fake data.
         # First, we put together the output of the tranformer and the generator
