@@ -248,11 +248,15 @@ def generate_data_loader(input_examples, label_masks, label_map, do_shuffle = Fa
   # Building the TensorDataset
   dataset = TensorDataset(input_ids, input_mask_array, label_id_array, label_mask_array)
   
+  print("max seq length")
+  print(max_seq_length)
   print("text")
   print(text)
   print(text[0])
   print("encoded sent")
   print(encoded_sent)
+  print("decoded text")
+  print(tokenizer.decode(encoded_sent))
   print("label_mask")
   print(label_mask)
   print("input ids")
