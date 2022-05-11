@@ -250,13 +250,18 @@ def generate_data_loader(input_examples, label_masks, label_map, do_shuffle = Fa
   
   print("text")
   print(text)
+  print(text[0])
+  print("encoded sent")
+  print(encoded_sent)
   print("label_mask")
   print(label_mask)
   print("input ids")
   print(len(input_ids))
+  print(len(input_ids[0]))
   print(input_ids)
   print("input_mask_array")
   print(len(input_mask_array))
+  print(len(input_mask_array[0]))
   print(input_mask_array)
   print("label_id_array")
   print(len(label_id_array))
@@ -655,6 +660,8 @@ for epoch_i in range(0, num_train_epochs):
             'Test Time': test_time
         }
     )
+    print("batch")
+    print(batch)
     print("input ids")
     print(len(b_input_ids))
     print(len(b_input_ids[0]))
