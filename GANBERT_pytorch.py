@@ -640,12 +640,18 @@ for epoch_i in range(0, num_train_epochs):
     print("model outputs")
     print(len(model_outputs))
     print(len(model_outputs[0]))
+    print(len(model_outputs[0][0]))
     print(len(model_outputs[1]))
     print(model_outputs)
     print("hidden states")
     print(len(hidden_states))
     print(len(hidden_states[0]))
     print(hidden_states)
+    print("generator output")
+    print(len(gen_rep))
+    print(len(gen_rep[0]))
+    print(gen_rep)
+    
 
 
 # In[12]:
