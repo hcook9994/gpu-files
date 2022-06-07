@@ -692,6 +692,7 @@ for epoch_i in range(0, num_train_epochs):
     print(len(model_outputs[0][0]))
     print(len(model_outputs[0][0][0]))
     print(len(model_outputs[1]))
+    print(len(model_outputs[1][0]))
     print("model outputs size")
     #print(model_outputs.size())
     print(model_outputs)
