@@ -1,4 +1,5 @@
 import nltk
+nltk.download('punkt')
 
 class DailyDialogParser:
     def __init__(self, path, sos, eos, eou):
