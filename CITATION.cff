@@ -1,0 +1,17 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Fine-Tuning Transformers for Classification Tasks
+  using Text Generating GANs
+message: >-
+  Please reference if this repository has been used
+  for any work
+type: software
+authors:
+  - given-names: Harrison Cook
+    name-particle: Harrison
+    family-names: Cook
+    name-suffix: Mr
+    email: harrisoncook9994@gmail.com
